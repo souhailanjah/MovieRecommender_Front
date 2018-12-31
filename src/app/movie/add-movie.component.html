@@ -1,0 +1,21 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Movie</h2>
+<form>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input [(ngModel)]="movie.name" placeholder="Name" name="name" class="form-control" id="movie_name">
+  </div>
+
+  <div class="form-group">
+    <label for="year">Year:</label>
+    <input [(ngModel)]="movie.year" placeholder="Year" name="year" class="form-control" id="year">
+  </div>
+
+  <div class="form-group">
+    <label for="rate">Rate:</label>
+    <input [(ngModel)]="movie.rate" placeholder="Rate" name="rate" class="form-control" id="rate">
+  </div>
+
+  <button class="btn btn-success" (click)="createMovie()">Create</button>
+</form>
+</div>
