@@ -1,4 +1,70 @@
 <div class="col-md-6">
   <h2> Recommendations</h2>
+  <br>
+  <h3>Sample user info</h3>
 
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>user_id</th>
+        <th>age</th>
+        <th>occupation</th>
+        <th>sex</th>
+        <th>zip_code</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of user">
+        <td>{{ r["user_id"] }}</td>
+        <td>{{ r["age"] }} </td>
+        <td>{{ r["occupation"] }}</td>
+        <td>{{ r["sex"] }}</td>
+        <td>{{ r["zip_code"] }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br><br>
+  <h3>Recommendation for sample user</h3>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>user_id</th>
+        <th>Movie Id</th>
+        <th>Score</th>
+        <th>Rank</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of recom">
+        <td>{{ r["user_id"] }} </td>
+        <td>{{ r["movie_id"] }}</td>
+        <td>{{ r["score"] }}</td>
+        <td>{{ r["rank"] }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <br><br>
+  <h3>Imdb links to recommended movies</h3>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th></th>
+        <th>Movie link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of movies">
+        <td> </td>
+        <td><a href= '{{r}}'>{{r}}</a></td>
+      </tr>
+    </tbody>
+  </table>
 </div>

@@ -1,0 +1,46 @@
+<div class="container">
+
+  <div class="col-md-3">
+    <h2 class="text-center">Search for a movie</h2>
+    <form>
+      <div class="form-group">
+        <input type="text" placeholder="Name name" name="name" class="form-control" id="movie_name">
+      </div>
+      <button class="btn btn-info" (click)="search()">Search</button>
+    </form>
+  </div>
+  <br>
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Actors</th>
+        <th>Awards</th>
+        <th>Country</th>
+        <th>Genre</th>
+        <th>Director</th>
+        <th>Plot</th>
+        <th>imdbRating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ val.Title }} </td>
+        <td>{{ r["Year"] }}</td>
+        <td>{{ r["Actors"] }}</td>
+        <td>{{ r["Awards"] }}</td>
+        <td>{{ r["Country"] }} </td>
+        <td>{{ r["Genre"] }}</td>
+        <td>{{ r["Genre"] }}</td>
+        <td>{{ r["Director"] }}</td>
+        <td>{{ r["Plot"] }} </td>
+        <td>{{ r["Plot"] }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

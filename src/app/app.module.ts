@@ -12,6 +12,9 @@ import { MovieComponent } from './movie/movie.component';
 import { AddMovieComponent } from './movie/add-movie.component';
 import { MovieService } from './movie/movie.service';
 import { RecommendComponent } from './recommend/recommend.component';
+import { ScrapeComponent } from './scrape/scrape.component';
+import { SearchComponent } from './search/search.component';
+import { SearchService } from './search/search.service';
 
 @NgModule({
   declarations: [
@@ -20,15 +23,17 @@ import { RecommendComponent } from './recommend/recommend.component';
     AddUserComponent,
     MovieComponent,
     AddMovieComponent,
-    RecommendComponent
-  ],
+    RecommendComponent,
+    ScrapeComponent,
+    SearchComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule
   ],
-  providers: [UserService,MovieService],
+  providers: [UserService,MovieService, SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
